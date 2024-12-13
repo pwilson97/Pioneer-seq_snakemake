@@ -1,0 +1,13 @@
+jobs: 71
+#use-conda: true
+cores: all
+cluster: >-
+    sbatch
+    --qos "general-compute"
+    --account "mjbuck"
+    --nodes 1
+    --ntasks-per-node 1
+    --mem 4800
+    --time 48:00:00
+    --job-name "Pioneer-seq_Vsearch_{wildcards}"
+    --output /dev/null

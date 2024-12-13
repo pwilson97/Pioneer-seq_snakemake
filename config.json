@@ -1,0 +1,54 @@
+{
+    "metafile": "metafile.txt",
+    "raw_fastq_gz_dir": "raw_data/",
+    "ref_lib_dir": "reference_libraries/",
+    "matrix_script": "matrix.py",
+    "dir_names":
+    {
+        "unzip_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/unzip",
+        "filter_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/filter",
+        "filter_log_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/filter/filter_logs",
+        "merge_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/merge",
+        "notmerge_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/merge/notmerge",
+        "merge_log_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/merge/merge_logs",
+        "trim_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/trim",
+        "trim_log_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/trim/trim_logs",
+        "restrict_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/restrict",
+        "restrict_log_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/restrict/restrict_logs",
+        "convert_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/convert",
+        "align_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/align",
+        "align_dbout_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/align/align_dbout",
+        "align_log_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/align/align_logs",
+        "matrix_dir": "/projects/academic/mjbuck/Buck_Lab_Members/Pioneer_seq/Pioneer-seq_snakemake/outputs/matrix"
+    },
+    "envs":
+    {
+        "cutadapt": "envs/cutadapt.yml",
+        "matrix": "envs/matrix.yml"
+    },
+    "params":
+    {
+        "qscore": "30",
+        "maxdiffs": "2",
+        "minovlen": "20",
+        "pair1": "GATGGACCCTATACGCGGC...TGCCAGTCGGATAGTGTTCCAGGTTCAGAGG",
+        "pair2": "AGCTCGAGAACGATGGACCCTATACGCGGC...TGCCAGTCGGATAGTGTTCC",
+        "pair3": "CTGAATGATGGACCCTATACGCGGC...TGCCAGTCGGATAGTGTTCCAGAACAGTA",
+        "pair4": "TCACTCTTGATGGACCCTATACGCGGC...TGCCAGTCGGATAGTGTTCCCGTCCAT",
+        "minimum_length": "174",
+        "maximum_length": "195",
+        "global_clustering_threshold": "0.985",
+        "threads": "8",
+        "maxrejects": "0",
+        "maxaccepts": "0",
+        "qmask": "none",
+        "dbmask": "none",
+        "userfields": "query+target+id+alnlen+mism+opens+qlo+qhi+tlo+thi+evalue+bits",
+        "mincols": "150"
+    },
+    "tool_versions":
+    {
+        "vsearch": "/projects/academic/mjbuck/Buck_Lab_Members/xyu26/softwares/vsearch-2.8.1/bin/vsearch",
+        "fastx_toolkit": "/projects/academic/mjbuck/Tools/fastx_toolkit-0.0.14/bin/fastq_to_fasta"
+    }
+}
